@@ -7,3 +7,220 @@ Description: Yomz'blog theme
 Requires at least: WordPress 5.0
 Version: 1.0
 */
+.site-title { color: #E4572E }
+h2 a {
+    background-image: linear-gradient(to right, greenyellow 0, greenyellow 100%);
+    background-position: 0 -0.1em;
+    background-repeat: no-repeat;
+    transition: background .3s;
+    background-size: 0% 100%;
+}
+h2 a:hover { background-size: 100% 100% }
+.list-post h3 { color: darkviolet }
+.main-article a { border-bottom: 3px solid greenyellow }
+.main-article header h2 { color: darkviolet }
+figcaption { color: #6f6f6f }
+aside > div > a > span { border-bottom: 3px solid greenyellow }
+footer { color: darkgrey }
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+}
+body {
+    color: #000;
+    margin: 0 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-rendering: optimizeLegibility;
+}
+main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+h1, h2, h3, h4, time {
+    font-family: 'Poppins', sans-serif;
+}
+.site-title {
+    font-weight: 900;
+    margin: 30px 0 15px;
+    font-size: 3rem;
+    font-style: italic;
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+body > header {
+    border-bottom: 3px solid black;
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+.main-article > header {
+    margin-bottom: 20px;
+}
+.main-article a {
+    color: currentColor;
+    text-decoration: none;
+}
+aside {
+    max-width: 800px;
+    margin: 30px auto 30px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    font-family: 'Poppins', sans-serif;
+}
+aside > div {
+    display: flex;
+    flex-direction: column;
+    max-width: 40%;
+    font-size: 14px;
+}
+aside > div > a {
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    color: currentColor;
+}
+aside .next-post {
+    text-align: right;
+}
+figure {
+    margin: 0 0 20px;
+}
+figcaption {
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 5px;
+}
+h1 {
+    font-weight: 800;
+    margin: 0 0 10px 0;
+    font-size: 2.4rem;
+    line-height: 1.15;
+}
+h2 {
+    text-transform: uppercase;
+    font-size: 1rem;
+    display: inline-block;
+    margin: 0;
+}
+.list-post-article h2 {
+    text-transform: initial;
+    font-weight: 800;
+    margin: 0;
+    font-size: 1.5rem;
+    line-height: 1.15;
+}
+.list-post-article h2 a {
+    text-decoration: none;
+    color: inherit;
+}
+.list-post-article h3 {
+    text-transform: uppercase;
+    font-size: .8rem;
+    display: inline-block;
+    margin: 0;
+}
+time {
+    font-size: .8rem;
+    font-weight: 500;
+}
+.main-article time {
+    display: block
+}
+.main-article time::first-letter {
+    text-transform: uppercase;
+}
+.list-post-article time:before {
+    content: '• ';
+}
+main.list-post article {
+    margin: 25px auto;
+    display: flex;
+    align-items: flex-start;
+}
+.list-post-thumbnail {
+    width: 100px;
+    margin-right: 15px;
+}
+img {
+    width: 100%;
+    height: auto;
+}
+p {
+    max-width: 700px;
+    margin: 0 auto 20px;
+    font-size: 18px;
+    line-height: 29px;
+    color: #222;
+}
+footer {
+    max-width: 800px;
+    margin: 30px auto 0;
+    border-top: 3px solid black;
+    padding: 30px 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #222;
+        color: #fff !important;
+    }
+    body > header, footer { border-color: darkgrey !important }
+    p { color: #fff !important }
+    .list-post h2 a { font-weight: 700 }
+    .list-post h3, .main-article header h2 { color: #cd56ff }
+    figcaption { color: darkgrey !important }
+    h2 a {
+        background-position: bottom left !important;
+        background-size: 0% 10%;
+    }
+    h2 a:hover { background-size: 100% 10% }
+}
+
+@media (max-width: 665px) {
+    body {
+        margin: 0 15px;
+    }
+    .site-title {
+        margin: 20px 0;
+        font-size: 2.5rem;
+    }
+    main.list-post article {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    .list-post-thumbnail {
+        margin-right: 0;
+        margin-left: 15px;
+    }
+    main.list-post article h2 {
+        font-size: 18px;
+        font-weight: 700;
+    }
+    main.list-post article time {
+        display: none;
+    }
+    article.main-article h1 {
+        font-size: 1.8rem;
+        margin-bottom: 5px;
+    }
+    p {
+        font-size: 17px;
+    }
+    footer {
+        font-size: 14px;
+    }
+    aside {
+        display: block;
+    }
+    aside > div {
+        max-width: 100%;
+    }
+    aside > div + div {
+        margin-top: 10px;
+    }
+}
+
+
