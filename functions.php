@@ -25,3 +25,14 @@ function yomzpress_register_assets() {
     );
 }
 add_action( 'wp_enqueue_scripts', 'yomzpress_register_assets' );
+
+// Ménage wp_head
+remove_action('wp_head', 'rsd_link');
+remove_action('wp_head', 'wlwmanifest_link');
+remove_action('wp_head', 'wp_generator');
+remove_action('wp_head', 'start_post_rel_link');
+remove_action('wp_head', 'index_rel_link');
+remove_action('wp_head', 'adjacent_posts_rel_link');
+
+// Retrait de la barre Admin
+add_filter( 'show_admin_bar', '__return_false' );
