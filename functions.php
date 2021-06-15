@@ -2,6 +2,9 @@
 
 // Ajouter la prise en charge des images mises en avant
 add_theme_support( 'post-thumbnails' );
+add_image_size( 'list-thumb', 100, 0, false );
+add_image_size( 'post-block', 800, 0, false );
+add_image_size( 'post-large', 1600, 0, false );
 
 // Ajouter automatiquement le titre du site dans l'en-tête du site
 add_theme_support( 'title-tag' );

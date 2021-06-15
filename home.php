@@ -3,7 +3,7 @@
 	<?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
 
         <article class="list-post-article">
-            <?php the_post_thumbnail(); ?>
+            <?php the_post_thumbnail( 'list-thumb' ); ?>
             <div>
                 <h3>
                     <?php foreach ( get_the_category() as $category ) {
