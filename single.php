@@ -24,14 +24,14 @@
             <?php if (!empty($prev_post)) : ?>
                 <div class="former-post">
                     Article précédent&nbsp;:
-                    <a href="<?php the_permalink($prev_post->ID); ?>" alt="<?php the_title($prev_post->ID); ?>"><span><?php the_title($prev_post->ID); ?></span></a>
+                    <a href="<?php the_permalink($prev_post->ID); ?>" alt="<?php echo get_the_title($prev_post->ID); ?>"><span><?php echo get_the_title($prev_post->ID); ?></span></a>
                 </div>
             <?php endif; ?>
 
             <?php if (!empty($next_post)) : ?>
                 <div class="next-post">
                     Article suivant&nbsp;:
-                    <a href="<?php the_permalink($next_post->ID); ?>" alt="<?php the_title($next_post->ID); ?>"><span><?php the_title($next_post->ID); ?></span></a>
+                    <a href="<?php the_permalink($next_post->ID); ?>" alt="<?php echo get_the_title($next_post->ID); ?>"><span><?php echo get_the_title($next_post->ID); ?></span></a>
                 </div>
             <?php endif; ?>
         </aside>
