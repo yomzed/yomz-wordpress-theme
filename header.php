@@ -8,5 +8,10 @@
 </head>
 
 <body <?php body_class(); ?>>
-    
-    <?php wp_body_open(); ?>
+    <header>
+        <?php if( is_home() || is_front_page() ) : ?>
+            <h1 class="site-title"><?php bloginfo('name'); ?></h1>
+        <?php else : ?>
+            <a class="site-title" href="<?php echo home_url( '/' ); ?>"><?php bloginfo('name'); ?></a>
+        <?php endif; ?>
+    </header>
