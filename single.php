@@ -5,7 +5,11 @@
         <main>
             <article class="main-article">
                 <header>
-                    <h2><?php the_category(); ?></h2>
+                    <h2>
+                        <?php foreach ( get_the_category() as $category ) {
+                            echo $category->cat_name;
+                        } ?>
+                    </h2>
                     <h1><?php the_title(); ?></h1>
                     <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time( get_option( 'date_format' ) ); ?></time>
                 </header>
