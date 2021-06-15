@@ -10,7 +10,7 @@
                         echo $category->cat_name;
                     } ?>
                 </h3>
-                <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time( 'd/m/Y' ); ?></time>
+                <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time( 'd/m/y' ); ?></time>
                 <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
             </div>
         </article>
