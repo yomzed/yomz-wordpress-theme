@@ -22,12 +22,13 @@ function yomzpress_meta_head() {
         
         // Posts
         if( is_single() ) {
+            $post = $GLOBALS['post'];
             $meta['og:type'] = 'article';
             $meta['twitter:card'] = 'summary_large_image';
             $meta['article:published_time'] = get_the_time('c');
             $meta['article:modified_time'] = get_the_modified_time('c');
-            $meta['og:image'] = get_the_post_thumbnail_url('medium');
-            $meta['twitter:image'] = get_the_post_thumbnail_url('medium');
+            $meta['og:image'] = get_the_post_thumbnail_url($post, 'medium');
+            $meta['twitter:image'] = get_the_post_thumbnail_url($post, 'medium');
         }
     }
     foreach( $meta as $name => $content ) {
