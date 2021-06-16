@@ -4,7 +4,7 @@
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <!-- FAVICONS-->
-        <link rel="icon" sizes="16x16" href="<?php theme_file_uri('/favicons/favicon-16x16.png'); ?>">
+        <link rel="icon" sizes="16x16" href="<?php theme_file_uri('/img/favicons/favicon-16x16.png'); ?>">
         <!-- <link rel="icon" sizes="32x32" href="/favicons/favicon-32x32.png">
         <link rel="icon" sizes="48x48" href="/favicons/favicon-48x48.png">
         <link rel="icon" sizes="128x128" href="/favicons/favicon-128x128.png">
