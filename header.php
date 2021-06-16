@@ -3,27 +3,17 @@
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-    <!-- FAVICONS-->
-        <link rel="icon" sizes="16x16" href="<?php echo get_theme_file_uri('/img/favicons/favicon-16x16.png'); ?>">
-        <link rel="icon" sizes="32x32" href="<?php echo get_theme_file_uri('/img/favicons/favicon-32x32.png'); ?>">
-        <link rel="icon" sizes="48x48" href="<?php echo get_theme_file_uri('/img/favicons/favicon-48x48.png'); ?>">
-        <link rel="icon" sizes="128x128" href="<?php echo get_theme_file_uri('/img/favicons/favicon-128x128.png'); ?>">
-        <link rel="icon" sizes="152x152" href="<?php echo get_theme_file_uri('/img/favicons/favicon-152x152.png'); ?>">
-        <link rel="icon" sizes="167x167" href="<?php echo get_theme_file_uri('/img/favicons/favicon-167x167.png'); ?>">
-        <link rel="icon" sizes="180x180" href="<?php echo get_theme_file_uri('/img/favicons/favicon-180x180.png'); ?>">
-        <link rel="icon" sizes="192x192" href="<?php echo get_theme_file_uri('/img/favicons/favicon-192x192.png'); ?>">
-        <link rel='mask-icon' href="<?php echo get_theme_file_uri('/img/favicons/mask-icon.svg'); ?>" color='#9400d3'>
-    <!-- END FAVICONS-->
-    <!-- favicon -->
+
+    <link rel="icon" sizes="16x16" href="<?php echo get_theme_file_uri('/img/favicons/favicon-16x16.png'); ?>">
+    <link rel="icon" sizes="32x32" href="<?php echo get_theme_file_uri('/img/favicons/favicon-32x32.png'); ?>">
+    <link rel="icon" sizes="48x48" href="<?php echo get_theme_file_uri('/img/favicons/favicon-48x48.png'); ?>">
+    <link rel="icon" sizes="128x128" href="<?php echo get_theme_file_uri('/img/favicons/favicon-128x128.png'); ?>">
+    <link rel="icon" sizes="152x152" href="<?php echo get_theme_file_uri('/img/favicons/favicon-152x152.png'); ?>">
+    <link rel="icon" sizes="167x167" href="<?php echo get_theme_file_uri('/img/favicons/favicon-167x167.png'); ?>">
+    <link rel="icon" sizes="180x180" href="<?php echo get_theme_file_uri('/img/favicons/favicon-180x180.png'); ?>">
+    <link rel="icon" sizes="192x192" href="<?php echo get_theme_file_uri('/img/favicons/favicon-192x192.png'); ?>">
+    <link rel='mask-icon' href="<?php echo get_theme_file_uri('/img/favicons/mask-icon.svg'); ?>" color='#9400d3'>
     <!--
-        FAVICON 
-
-        META
-        og:image:width
-        og:image:height
-
-
-        SCHEMA
 
         RSS
      -->
