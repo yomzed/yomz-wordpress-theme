@@ -31,7 +31,7 @@ function yomzpress_meta_head() {
         }
     }
     foreach( $meta as $name => $content ) {
-        echo '<meta name="' . $name . '" content="' . $content . '">' . chr(8);
+        echo '<meta name="' . $name . '" content="' . $content . '">' . "\n";
     }
 }
 add_action( 'wp_head', 'yomzpress_meta_head' );
