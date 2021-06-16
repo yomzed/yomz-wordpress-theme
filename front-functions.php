@@ -17,6 +17,7 @@ function yomzpress_meta_head() {
         $meta['og:description'] = get_the_excerpt();
         $meta['og:url'] = get_permalink();
         $meta['og:type'] = 'article';
+        $meta['og:image'] = get_the_post_thumbnail_url();
     }
     foreach( $meta as $name => $content ) {
         echo '<meta name="' . $name . '" content="' . $content . '">';
