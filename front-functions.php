@@ -1,6 +1,5 @@
 <?php
 function yomzpress_meta_head() {
-    // echo '<meta name="og:site_name" content="'. get_bloginfo('name') .'">';
     $meta = [
         'og:title' => get_bloginfo( 'name' ) . '–' . get_bloginfo( 'description' ),
         'og:site_name' => get_bloginfo( 'name' ),
@@ -8,7 +7,10 @@ function yomzpress_meta_head() {
         'og:description' => get_bloginfo( 'description' ),
         'og:type' => 'website',
         'og:url' => home_url( '/' ),
-        'og:image' => get_template_directory_uri() . '/img/og-image.jpg'
+        'og:image' => get_template_directory_uri() . '/img/og-image.jpg',
+        'twitter:card' => 'summary',
+        'twitter:site' => '@iomzed',
+        'twitter:image' => get_template_directory_uri() . '/img/og-image.jpg'
     ];
     if( is_single() ) {
         $post = $GLOBALS['post'];
@@ -18,6 +20,10 @@ function yomzpress_meta_head() {
         $meta['og:url'] = get_permalink();
         $meta['og:type'] = 'article';
         $meta['og:image'] = get_the_post_thumbnail_url();
+        $meta['twitter:card'] = 'summary_large_image';
+        $meta['twitter:image'] = get_the_post_thumbnail_url();
+        $meta['article:published_time'] = get_the_time('c');
+        $meta['article:modified_time'] = get_the_modified_time('c');
     }
     foreach( $meta as $name => $content ) {
         echo '<meta name="' . $name . '" content="' . $content . '">';
