@@ -30,11 +30,20 @@ function yomzpress_register_assets() {
 add_action( 'wp_enqueue_scripts', 'yomzpress_register_assets' );
 
 function yomzpress_meta_head() {
-    echo '<meta name="og:site_name" content="'. get_bloginfo('name') .'">';
+    // echo '<meta name="og:site_name" content="'. get_bloginfo('name') .'">';
+    $meta = [
+        'og:site_name' => get_bloginfo('name')
+    ];
     if( is_single() ) {
-
+        $post = $GLOBALS['post'];
+        $meta['og:title'] = $post->post_title;
+        $meta['og:description'] = $post->post_excerpt;
+        $meta['og:url'] = get_permalink($post);
     } else {
 
+    }
+    foreach( $meta as $name => $content ) {
+        echo '<meta name="' . $name . '" content="' . $content . '">';
     }
 }
 add_action( 'wp_head', 'yomzpress_meta_head' );
