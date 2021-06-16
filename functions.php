@@ -30,7 +30,7 @@ function yomzpress_register_assets() {
 add_action( 'wp_enqueue_scripts', 'yomzpress_register_assets' );
 
 function yomzpress_meta_head() {
-    echo '<meta name="og:site_name" content="'. bloginfo('name').'" />';
+    echo '<meta name="og:site_name" content="'. bloginfo('name') .'">';
     if( is_single() ) {
 
     } else {
