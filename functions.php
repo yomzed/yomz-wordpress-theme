@@ -16,7 +16,6 @@ add_theme_support( 'title-tag' );
 // add_action( 'admin_menu', 'yomzpress_remove_menu_pages' );
 
 function yomzpress_register_assets() { 
-    // Déclarer style.css à la racine du thème
     wp_enqueue_style( 
         'yomzpress',
         get_stylesheet_uri(), 
@@ -29,6 +28,16 @@ function yomzpress_register_assets() {
     wp_deregister_script( 'wp-embed' );
 }
 add_action( 'wp_enqueue_scripts', 'yomzpress_register_assets' );
+
+function yomzpress_meta_head() {
+    echo '<meta name="og:site_name" content="'. bloginfo('name').'" />';
+    if( is_single() ) {
+
+    } else {
+
+    }
+}
+add_action( 'wp_head', 'yomzpress_meta_head' );
 
 // Ménage wp_head
 remove_action('wp_head', 'rsd_link');
