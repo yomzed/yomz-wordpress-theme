@@ -3,7 +3,7 @@ function yomzpress_meta_head() {
     // Default meta
     $description = get_bloginfo( 'description' );
     $meta = [
-        'og:title' => get_bloginfo( 'name' ) . '–' . get_bloginfo( 'description' ),
+        'og:title' => get_bloginfo( 'name' ) . ' – ' . get_bloginfo( 'description' ),
         'og:site_name' => get_bloginfo( 'name' ),
         'og:description' => get_bloginfo( 'description' ),
         'og:type' => 'website',
