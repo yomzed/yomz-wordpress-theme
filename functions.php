@@ -36,9 +36,9 @@ function yomzpress_meta_head() {
     ];
     if( is_single() ) {
         $post = $GLOBALS['post'];
-        $meta['og:title'] = $post->post_title;
-        $meta['og:description'] = $post->post_excerpt;
-        $meta['og:url'] = get_permalink($post);
+        $meta['og:title'] = get_the_title($post);
+        $meta['og:description'] = get_the_excerpt();
+        $meta['og:url'] = get_permalink();
     } else {
 
     }
