@@ -25,6 +25,8 @@ function yomzpress_register_assets() {
     );
     // Retirer le CSS Gutenberg
     wp_dequeue_style( 'wp-block-library' );
+    // Retirer les auto-embeds 
+    wp_dequeue_script( 'wp-embed' );
 }
 add_action( 'wp_enqueue_scripts', 'yomzpress_register_assets' );
 
