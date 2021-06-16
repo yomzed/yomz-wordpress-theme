@@ -3,30 +3,24 @@
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-
+    <!-- FAVICONS-->
+        <link rel="icon" sizes="16x16" href="<?php theme_file_uri('/favicons/favicon-16x16.png'); ?>">
+        <!-- <link rel="icon" sizes="32x32" href="/favicons/favicon-32x32.png">
+        <link rel="icon" sizes="48x48" href="/favicons/favicon-48x48.png">
+        <link rel="icon" sizes="128x128" href="/favicons/favicon-128x128.png">
+        <link rel="icon" sizes="152x152" href="/favicons/favicon-152x152.png">
+        <link rel="icon" sizes="167x167" href="/favicons/favicon-167x167.png">
+        <link rel="icon" sizes="180x180" href="/favicons/favicon-180x180.png">
+        <link rel="icon" sizes="192x192" href="/favicons/favicon-192x192.png">
+        <link rel='mask-icon' href='/favicons/mask-icon.svg' color='#9400d3'> -->
+    <!-- END FAVICONS-->
     <!-- favicon -->
     <!--
         FAVICON 
 
         META
-        description
-        og:site_name
-        og:type (website|article)
-        og:title
-        og:description
-        og:url
-        og:image
-        twitter:card
-        twitter:title
-        twitter:description
-        twitter:url
-        twitter:image
-        twitter:site
         og:image:width
         og:image:height
-        article:published_time
-        article:modified_time
-        article:tag
 
 
         SCHEMA
