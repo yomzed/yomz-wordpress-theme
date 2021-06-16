@@ -40,7 +40,7 @@ function yomzpress_meta_head() {
         $meta['og:description'] = get_the_excerpt();
         $meta['og:url'] = get_permalink();
     } else {
-
+        $meta['og:url'] = get_permalink();
     }
     foreach( $meta as $name => $content ) {
         echo '<meta name="' . $name . '" content="' . $content . '">';
