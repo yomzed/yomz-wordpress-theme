@@ -1,5 +1,7 @@
 <?php 
-
+if ( ! is_admin() ) {
+    include( get_template_directory() . '/front-functions.php' );
+}
 // Ajouter la prise en charge des images mises en avant
 add_theme_support( 'post-thumbnails' );
 add_image_size( 'list-thumb', 100, 0, false );
@@ -28,25 +30,6 @@ function yomzpress_register_assets() {
     wp_deregister_script( 'wp-embed' );
 }
 add_action( 'wp_enqueue_scripts', 'yomzpress_register_assets' );
-
-function yomzpress_meta_head() {
-    // echo '<meta name="og:site_name" content="'. get_bloginfo('name') .'">';
-    $meta = [
-        'og:site_name' => get_bloginfo('name')
-    ];
-    if( is_single() ) {
-        $post = $GLOBALS['post'];
-        $meta['og:title'] = wp_strip_all_tags(get_the_title($post));
-        $meta['og:description'] = get_the_excerpt();
-        $meta['og:url'] = get_permalink();
-    } else {
-        $meta['og:url'] = get_permalink();
-    }
-    foreach( $meta as $name => $content ) {
-        echo '<meta name="' . $name . '" content="' . $content . '">';
-    }
-}
-add_action( 'wp_head', 'yomzpress_meta_head' );
 
 // Ménage wp_head
 remove_action('wp_head', 'rsd_link');
