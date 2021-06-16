@@ -23,6 +23,8 @@ function yomzpress_register_assets() {
         array(), 
         '1.0'
     );
+    // Retirer le CSS Gutenberg
+    wp_dequeue_style( 'wp-block-library' );
 }
 add_action( 'wp_enqueue_scripts', 'yomzpress_register_assets' );
 
