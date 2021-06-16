@@ -93,7 +93,7 @@ function yomzpress_schema_head() {
     }
 
     echo '    <script type="application/ld+json">' . "\n";
-    echo '        ' . utf8_decode(json_encode($schema)) . "\n";
+    echo '        ' . json_encode($schema, JSON_UNESCAPED_UNICODE) . "\n";
     echo '    </script>' . "\n";
 }
 
