@@ -2,12 +2,13 @@
 function yomzpress_meta_head() {
     // echo '<meta name="og:site_name" content="'. get_bloginfo('name') .'">';
     $meta = [
-        'og:title' => wp_title( '–', false ),
+        'og:title' => get_bloginfo( 'name' ) . '–' . get_bloginfo( 'description' ),
         'og:site_name' => get_bloginfo( 'name' ),
         'description' => get_bloginfo( 'description' ),
         'og:description' => get_bloginfo( 'description' ),
         'og:type' => 'website',
-        'og:url' => home_url( '/' )
+        'og:url' => home_url( '/' ),
+        'og:image' => get_template_directory_uri() . '/img/og-image.jpg'
     ];
     if( is_single() ) {
         $post = $GLOBALS['post'];
