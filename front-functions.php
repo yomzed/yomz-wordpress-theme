@@ -1,4 +1,30 @@
 <?php
+function yomzpress_register_assets() { 
+    wp_enqueue_style( 
+        'yomzpress',
+        get_stylesheet_uri(), 
+        array(), 
+        '1.0'
+    );
+    // Retirer le CSS Gutenberg
+    wp_dequeue_style( 'wp-block-library' );
+    // Retirer les auto-embeds 
+    wp_deregister_script( 'wp-embed' );
+}
+add_action( 'wp_enqueue_scripts', 'yomzpress_register_assets' );
+
+// Ménage wp_head
+remove_action('wp_head', 'rsd_link');
+remove_action('wp_head', 'wlwmanifest_link');
+remove_action('wp_head', 'wp_generator');
+remove_action('wp_head', 'start_post_rel_link');
+remove_action('wp_head', 'index_rel_link');
+remove_action('wp_head', 'adjacent_posts_rel_link');
+remove_action('wp_head', 'print_emoji_detection_script', 7);
+remove_action('wp_print_styles', 'print_emoji_styles');
+remove_action( 'wp_head', 'rest_output_link_wp_head' );
+remove_action( 'wp_head', 'wp_oembed_add_discovery_links' );
+
 function yomzpress_meta_head() {
     // Default meta
     $description = get_bloginfo( 'description' );
@@ -96,5 +122,4 @@ function yomzpress_schema_head() {
     echo '        ' . json_encode($schema, JSON_UNESCAPED_UNICODE) . "\n";
     echo '    </script>' . "\n";
 }
-
 add_action( 'wp_head', 'yomzpress_schema_head' );

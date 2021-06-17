@@ -5,43 +5,29 @@ if ( ! is_admin() ) {
 // Ajouter la prise en charge des images mises en avant
 add_theme_support( 'post-thumbnails' );
 add_image_size( 'list-thumb', 100, 0, false );
+add_image_size( 'list-thumb-large', 300, 0, false );
 add_image_size( 'post-block', 800, 0, false );
 add_image_size( 'post-large', 1600, 0, false );
 
 // Ajouter automatiquement le titre du site dans l'en-tête du site
 add_theme_support( 'title-tag' );
 
+// Ajout des images mises en avant dans le RSS
+function rss_post_thumbnail( $content ) {
+    global $post;
+    if( has_post_thumbnail( $post->ID ) ) {
+        $content = '<p>' . get_the_post_thumbnail( $post->ID, 'thumbnail' ) . '</p>' . $content;
+    }
+    return $content;
+}
+add_filter('the_content_feed', 'rss_post_thumbnail');
+
+
 // function yomzpress_remove_menu_pages() {
 // 	remove_menu_page( 'tools.php' );
 //     remove_menu_page( 'edit-comments.php' );
 // }
 // add_action( 'admin_menu', 'yomzpress_remove_menu_pages' );
-
-function yomzpress_register_assets() { 
-    wp_enqueue_style( 
-        'yomzpress',
-        get_stylesheet_uri(), 
-        array(), 
-        '1.0'
-    );
-    // Retirer le CSS Gutenberg
-    wp_dequeue_style( 'wp-block-library' );
-    // Retirer les auto-embeds 
-    wp_deregister_script( 'wp-embed' );
-}
-add_action( 'wp_enqueue_scripts', 'yomzpress_register_assets' );
-
-// Ménage wp_head
-remove_action('wp_head', 'rsd_link');
-remove_action('wp_head', 'wlwmanifest_link');
-remove_action('wp_head', 'wp_generator');
-remove_action('wp_head', 'start_post_rel_link');
-remove_action('wp_head', 'index_rel_link');
-remove_action('wp_head', 'adjacent_posts_rel_link');
-remove_action('wp_head', 'print_emoji_detection_script', 7);
-remove_action('wp_print_styles', 'print_emoji_styles');
-remove_action( 'wp_head', 'rest_output_link_wp_head' );
-remove_action( 'wp_head', 'wp_oembed_add_discovery_links' );
 
 // Retrait de la barre Admin
 add_filter( 'show_admin_bar', '__return_false' );
