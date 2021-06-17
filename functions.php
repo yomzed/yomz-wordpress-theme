@@ -15,15 +15,20 @@ add_theme_support( 'title-tag' );
 // Support RSS
 add_theme_support( 'automatic-feed-links' );
 add_filter( 'feed_links_show_comments_feed', '__return_false' );
+function yomzpress_disable_postcomments_feed( $for_comments ) {
+    return;
+}
+add_filter( 'post_comments_feed_link',  'yomzpress_disable_postcomments_feed' );
+
 // Ajout des images mises en avant dans le RSS
-function rss_post_thumbnail( $content ) {
+function yomzpress_rss_post_thumbnail( $content ) {
     global $post;
     if( has_post_thumbnail( $post->ID ) ) {
         $content = '<p>' . get_the_post_thumbnail( $post->ID, 'thumbnail' ) . '</p>' . $content;
     }
     return $content;
 }
-add_filter('the_content_feed', 'rss_post_thumbnail');
+add_filter('the_content_feed', 'yomzpress_rss_post_thumbnail');
 
 
 // function yomzpress_remove_menu_pages() {
