@@ -12,6 +12,9 @@ add_image_size( 'post-large', 1600, 0, false );
 // Ajouter automatiquement le titre du site dans l'en-tête du site
 add_theme_support( 'title-tag' );
 
+// Support RSS
+add_theme_support( 'automatic-feed-links' );
+
 // Ajout des images mises en avant dans le RSS
 function rss_post_thumbnail( $content ) {
     global $post;
