@@ -14,7 +14,7 @@ add_theme_support( 'title-tag' );
 
 // Support RSS
 add_theme_support( 'automatic-feed-links' );
-
+add_filter( 'feed_links_show_comments_feed', '__return_false' );
 // Ajout des images mises en avant dans le RSS
 function rss_post_thumbnail( $content ) {
     global $post;
