@@ -30,12 +30,5 @@ function yomzpress_rss_post_thumbnail( $content ) {
 }
 add_filter('the_content_feed', 'yomzpress_rss_post_thumbnail');
 
-
-// function yomzpress_remove_menu_pages() {
-// 	remove_menu_page( 'tools.php' );
-//     remove_menu_page( 'edit-comments.php' );
-// }
-// add_action( 'admin_menu', 'yomzpress_remove_menu_pages' );
-
 // Retrait de la barre Admin
 add_filter( 'show_admin_bar', '__return_false' );
