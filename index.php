@@ -1,5 +1,7 @@
 <?php get_header(); ?>
 
-<h1>Coucou</h1>
+    <main>
+        <?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
+    </main>
 
 <?php get_footer(); ?>
