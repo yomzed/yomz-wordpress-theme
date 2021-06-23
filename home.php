@@ -16,7 +16,7 @@
         </article>
 
 	<?php endwhile; endif; ?>
-        <aside>
+        <aside class="list-post-pagination">
             <div class="nav-next"><?php next_posts_link( 'Articles plus récents' ); ?></div>
             <div class="nav-previous"><?php previous_posts_link( 'Plus d\'articles' ); ?></div>
         </aside>

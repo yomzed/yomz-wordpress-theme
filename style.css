@@ -62,12 +62,14 @@ body > header {
     text-decoration: none;
 }
 aside {
-    max-width: 800px;
-    margin: 30px auto 30px;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     font-family: 'Poppins', sans-serif;
+}
+aside:not(.list-post-pagination) {
+    margin: 30px auto 30px;
+    max-width: 800px;
 }
 aside > div {
     display: flex;
