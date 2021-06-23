@@ -164,6 +164,12 @@ footer {
     font-family: 'Poppins', sans-serif;
 }
 
+.widget_recent_entries li {
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+
 @media (prefers-color-scheme: dark) {
     body {
         background-color: #222;
