@@ -198,6 +198,9 @@ footer {
     padding: 5px 10px;
     font-weight: 500;
     cursor: pointer;
+    background-color: darkviolet;
+    color: white;
+    border: 0;
 }
 .comment-field + .comment-field {
     margin-top: 10px;
