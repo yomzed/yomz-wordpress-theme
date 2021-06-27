@@ -236,8 +236,9 @@ footer {
     max-width: unset;
     font-size: 16px;
 }
-.comment .reply {
+.comment .comment-reply-link {
     margin-top: 15px;
+    display: inline-block;
 }
 
 @media (prefers-color-scheme: dark) {
