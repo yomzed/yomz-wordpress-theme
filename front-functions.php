@@ -36,7 +36,7 @@ add_filter('comment_form_default_fields', 'yomzpress_comments_remove_fields');
 function yomzpress_comments_order_fields($fields) {
     $comment_field = $fields['comment'];
     $author_field = $fields['author'];
-    var_dump($author_field);
+
     unset( $fields['comment'] );
     unset( $fields['author'] );
 
