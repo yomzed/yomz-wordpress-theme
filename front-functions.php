@@ -54,7 +54,7 @@ function yomzpress_comments_list($comment, $args, $depth) {
         <article>
             <header class="comment-author vcard">
                 <cite class="fn"><?php echo get_comment_author(); ?></cite>
-                <time><?php echo get_comment_date( get_option( 'date_format' ) ); ?></time>
+                <time datetime="<?php echo get_comment_date('Y-m-d H:i:s'); ?>"><?php echo get_comment_date( get_option( 'date_format' ) ); ?></time>
             </header>
             <div class="comment-content">
                 <?php comment_text(); ?>
