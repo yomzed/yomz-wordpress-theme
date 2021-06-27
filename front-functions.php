@@ -51,25 +51,27 @@ function yomzpress_comments_list($comment, $args, $depth) {
     
     ?>
     <li <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ); ?> id="comment-<?php comment_ID(); ?>">
-        <div class="comment-author vcard">
-            <cite class="fn"><?php echo get_comment_author(); ?></cite>
-            <time><?php echo get_comment_date( get_option( 'date_format' ) ); ?></time>
-        </div>
-        <div class="comment-content">
-            <?php comment_text(); ?>
-        </div>
-        <div class="reply"><?php 
-            comment_reply_link( 
-                array_merge( 
-                    $args, 
-                    array( 
-                        // 'add_below' => $add_below, 
-                        'depth'     => $depth, 
-                        'max_depth' => $args['max_depth'] 
+        <article>
+            <header class="comment-author vcard">
+                <cite class="fn"><?php echo get_comment_author(); ?></cite>
+                <time><?php echo get_comment_date( get_option( 'date_format' ) ); ?></time>
+            </header>
+            <div class="comment-content">
+                <?php comment_text(); ?>
+            </div>
+            <div class="reply"><?php 
+                comment_reply_link( 
+                    array_merge( 
+                        $args, 
+                        array( 
+                            // 'add_below' => $add_below, 
+                            'depth'     => $depth, 
+                            'max_depth' => $args['max_depth'] 
+                        ) 
                     ) 
-                ) 
-            ); ?>
-        </div>
+                ); ?>
+            </div>
+        </article>
     </li>
     <?php
 }
