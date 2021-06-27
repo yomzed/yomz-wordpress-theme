@@ -27,8 +27,17 @@ remove_action( 'wp_head', 'wp_oembed_add_discovery_links' );
 
 // Comments form
 function yomzpress_comments_fields($fields) {
-    unset($fields['url']);
-    unset($fields['email']);
+    $comment_field = $fields['comment'];
+    $author_field = $fields['author'];
+
+    unset( $fields['url'] );
+    unset( $fields['email'] );
+    unset( $fields['comment'] );
+    unset( $fields['author'] );
+
+    $fields['author'] = $author_field;
+    $fields['comment'] = $comment_field;
+
     return $fields;
 }
 add_filter('comment_form_default_fields', 'yomzpress_comments_fields');
