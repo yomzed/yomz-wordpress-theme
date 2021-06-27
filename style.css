@@ -207,7 +207,7 @@ footer {
 }
 .comments-list {
     margin-top: 25px;
-    
+    list-style-type: none;
 }
 
 @media (prefers-color-scheme: dark) {
