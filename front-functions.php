@@ -52,6 +52,7 @@ function yomzpress_comments_list($comment, $args, $depth) {
     <div <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ); ?> id="comment-<?php comment_ID(); ?>">
         <div class="comment-author vcard">
             <cite class="fn"><?php echo get_comment_author_link(); ?></cite>
+            <time><?php echo get_comment_date( get_option( 'date_format' ) ); ?></time>
         </div>
     </div>
     <?php
