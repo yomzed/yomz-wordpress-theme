@@ -4,12 +4,12 @@
         'submit_field' => '<div class="form-submit">%1$s %2$s</div>'
      ) ); ?>
 
-    <div class="comments-list">
+    <ul class="comments-list">
         <?php 
             wp_list_comments( array(
-                'style' => 'div',
+                'style' => 'ul',
                 'callback' => 'yomzpress_comments_list'
             ) );
         ?>
-    </div>
+    </ul>
 </aside>
