@@ -7,7 +7,8 @@
     <div class="comments-list">
         <?php 
             wp_list_comments( array(
-                'style' => 'div'
+                'style' => 'div',
+                'callback' => 'yomzpress_comments_list'
             ) );
         ?>
     </div>

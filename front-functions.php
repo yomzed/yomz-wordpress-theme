@@ -25,14 +25,13 @@ remove_action('wp_print_styles', 'print_emoji_styles');
 remove_action( 'wp_head', 'rest_output_link_wp_head' );
 remove_action( 'wp_head', 'wp_oembed_add_discovery_links' );
 
-// Comments form
+// Comments form fields
 function yomzpress_comments_remove_fields($fields) {
     unset( $fields['url'] );
     unset( $fields['email'] );
     return $fields;
 }
 add_filter('comment_form_default_fields', 'yomzpress_comments_remove_fields');
-
 function yomzpress_comments_order_fields($fields) {
     $comment_field = $fields['comment'];
     $author_field = $fields['author'];
@@ -46,6 +45,15 @@ function yomzpress_comments_order_fields($fields) {
     return $fields;
 }
 add_filter( 'comment_form_fields', 'yomzpress_comments_order_fields' );
+
+// Comments list
+function yomzpress_comments_list($comment, $args, $depth) {
+    echo '<div class="' . comment_class( empty( $args['has_children'] ) ? '' : 'parent' ) . '" id="comment-' . comment_ID() . '">';
+    echo '  <div class="comment-author vcard">';
+    echo '      <cite class="fn">' . get_comment_author_link() . '</cite>';
+    echo '  </div>';
+    echo '</div>';
+}
 
 function yomzpress_meta_head() {
     // Default meta

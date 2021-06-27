@@ -205,6 +205,10 @@ footer {
 .comment-field + .comment-field {
     margin-top: 10px;
 }
+.comments-list {
+    margin-top: 25px;
+    
+}
 
 @media (prefers-color-scheme: dark) {
     body {
