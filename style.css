@@ -188,6 +188,9 @@ footer {
     border: 1px solid #BEBEBE;
     padding: 7px;
 }
+.comment-field + .comment-field {
+    margin-top: 10px;
+}
 
 @media (prefers-color-scheme: dark) {
     body {
