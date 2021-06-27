@@ -230,6 +230,7 @@ ul.children {
 }
 .comment article header time {
     font-weight: 400;
+    color: #6f6f6f;
 }
 .comment article header time::before {
     content: '• ';
