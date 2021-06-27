@@ -171,6 +171,9 @@ footer {
     font-weight: 600;
     font-family: 'Poppins', sans-serif;
 }
+aside.comments {
+    border-top: 1px solid #e5e5e5;
+}
 .comment-form {
     font-family: 'Poppins', sans-serif;
 }
