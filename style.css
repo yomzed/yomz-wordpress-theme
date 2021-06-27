@@ -193,6 +193,12 @@ footer {
     min-width: 50%;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
+.comment-form .form-submit input {
+    font-family: 'Poppins';
+    padding: 5px 10px;
+    font-weight: 500;
+    cursor: pointer;
+}
 .comment-field + .comment-field {
     margin-top: 10px;
 }
