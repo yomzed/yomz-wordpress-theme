@@ -48,7 +48,7 @@ add_filter( 'comment_form_fields', 'yomzpress_comments_order_fields' );
 
 // Comments list
 function yomzpress_comments_list($comment, $args, $depth) {
-    echo '<div class="' . comment_class( empty( $args['has_children'] ) ? '' : 'parent' ) . '" id="comment-' . comment_ID() . '">';
+    echo '<div ' . comment_class( empty( $args['has_children'] ) ? '' : 'parent' ) . ' id="comment-' . comment_ID() . '">';
     echo '  <div class="comment-author vcard">';
     echo '      <cite class="fn">' . get_comment_author_link() . '</cite>';
     echo '  </div>';
