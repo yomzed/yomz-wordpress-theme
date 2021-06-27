@@ -239,6 +239,9 @@ footer {
 .comment .comment-reply-link {
     margin-top: 15px;
     display: inline-block;
+    text-decoration: none;
+    color:initial;
+    border-bottom: 3px solid greenyellow
 }
 
 @media (prefers-color-scheme: dark) {
