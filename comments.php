@@ -8,7 +8,8 @@
         <?php 
             wp_list_comments( array(
                 'style' => 'ul',
-                'callback' => 'yomzpress_comments_list'
+                'callback' => 'yomzpress_comments_list',
+                'reverse_top_level' => true
             ) );
         ?>
     </ul>
