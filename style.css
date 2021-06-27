@@ -246,6 +246,8 @@ ul.children {
     color:grey;
     border-bottom: 3px solid greenyellow;
     font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
 }
 
 @media (prefers-color-scheme: dark) {
