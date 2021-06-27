@@ -171,6 +171,9 @@ footer {
     font-weight: 600;
     font-family: 'Poppins', sans-serif;
 }
+.comment-form {
+    font-family: 'Poppins', sans-serif;
+}
 
 @media (prefers-color-scheme: dark) {
     body {

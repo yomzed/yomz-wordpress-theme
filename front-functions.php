@@ -41,7 +41,7 @@ function yomzpress_comments_order_fields($fields) {
     unset( $fields['author'] );
 
     $fields['author'] = '<div class="comment-field author-field"><label for="author">Pseudo</label><br/><input id="author" name="author" type="text" value="" maxlength="245"></div>';
-    $fields['comment'] = '<div class="comment-field><label for="comment">' . _x( 'Comment', 'noun' ) . '</label><br /><textarea id="comment" name="comment" aria-required="true"></textarea></p>';
+    $fields['comment'] = '<div class="comment-field"><label for="comment">' . _x( 'Comment', 'noun' ) . '</label><br /><textarea id="comment" name="comment" aria-required="true"></textarea></p>';
 
     return $fields;
 }
