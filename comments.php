@@ -5,7 +5,9 @@
      ) ); ?>
 
     <?php 
-        wp_list_comments( array() );
+        wp_list_comments( array(
+            'style' => 'div'
+        ) );
     ?>
 
 </aside>
