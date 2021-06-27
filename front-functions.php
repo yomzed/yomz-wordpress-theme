@@ -25,6 +25,14 @@ remove_action('wp_print_styles', 'print_emoji_styles');
 remove_action( 'wp_head', 'rest_output_link_wp_head' );
 remove_action( 'wp_head', 'wp_oembed_add_discovery_links' );
 
+// Comments form
+function yomzpress_comments_fields($fields) {
+    unset($fields['url']);
+    unset($fields['email']);
+    return $fields;
+}
+add_filter('comment_form_default_fields', 'yomzpress_comments_fields');
+
 function yomzpress_meta_head() {
     // Default meta
     $description = get_bloginfo( 'description' );
