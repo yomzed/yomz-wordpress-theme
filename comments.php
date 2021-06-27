@@ -5,6 +5,7 @@
      ) ); ?>
 
     <?php 
+        var_dump(get_comments());
         wp_list_comments( array(
             'style' => 'div'
         ) );
