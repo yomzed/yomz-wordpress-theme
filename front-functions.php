@@ -54,6 +54,21 @@ function yomzpress_comments_list($comment, $args, $depth) {
             <cite class="fn"><?php echo get_comment_author_link(); ?></cite>
             <time><?php echo get_comment_date( get_option( 'date_format' ) ); ?></time>
         </div>
+        <div class="comment-content">
+            <?php comment_text(); ?>
+        </div>
+        <div class="reply"><?php 
+            comment_reply_link( 
+                array_merge( 
+                    $args, 
+                    array( 
+                        // 'add_below' => $add_below, 
+                        'depth'     => $depth, 
+                        'max_depth' => $args['max_depth'] 
+                    ) 
+                ) 
+            ); ?>
+        </div
     </div>
     <?php
 
