@@ -35,6 +35,11 @@
                 </div>
             <?php endif; ?>
         </aside>
+        <?php  
+            if ( comments_open() || get_comments_number() ) :
+                comments_template();
+            endif;
+        ?>
 
 	<?php endwhile; endif; ?>
 
