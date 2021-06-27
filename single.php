@@ -16,7 +16,7 @@
                 <?php the_content(); ?>
             </article>
         </main>
-        <aside>
+        <aside class="single-post-navigation">
             <?php 
                 $prev_post = get_adjacent_post( false, '', true);
                 $next_post = get_adjacent_post( false, '', false );
