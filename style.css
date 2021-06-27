@@ -191,6 +191,7 @@ footer {
 .comment-form .comment-field textarea {
     min-height: 100px;
     min-width: 50%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .comment-field + .comment-field {
     margin-top: 10px;
