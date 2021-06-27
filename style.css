@@ -209,6 +209,13 @@ footer {
     margin-top: 25px;
     list-style-type: none;
 }
+.comment article {
+    padding: 20px 0;
+    border-top: 1px solid #e5e5e5;
+}
+.comments-list > .comment:first-child article {
+    border: 0;
+}
 
 @media (prefers-color-scheme: dark) {
     body {
