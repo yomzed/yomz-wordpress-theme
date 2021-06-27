@@ -48,11 +48,19 @@ add_filter( 'comment_form_fields', 'yomzpress_comments_order_fields' );
 
 // Comments list
 function yomzpress_comments_list($comment, $args, $depth) {
-    echo '<div ' . comment_class( empty( $args['has_children'] ) ? '' : 'parent' ) . ' id="comment-' . comment_ID() . '">';
-    echo '  <div class="comment-author vcard">';
-    echo '      <cite class="fn">' . get_comment_author_link() . '</cite>';
-    echo '  </div>';
-    echo '</div>';
+    ?>
+    <div <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ); ?> id="comment-<?php comment_ID(); ?>">
+        <div class="comment-author vcard">
+            <cite class="fn"><?php echo get_comment_author_link(); ?></cite>
+        </div>
+    </div>
+    <?php
+
+    // echo '<div ' . comment_class( empty( $args['has_children'] ) ? '' : 'parent' ) . ' id="comment-' . comment_ID() . '">';
+    // echo '  <div class="comment-author vcard">';
+    // echo '      <cite class="fn">' . get_comment_author_link() . '</cite>';
+    // echo '  </div>';
+    // echo '</div>';
 }
 
 function yomzpress_meta_head() {
