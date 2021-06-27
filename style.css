@@ -188,6 +188,10 @@ footer {
     border: 1px solid #BEBEBE;
     padding: 7px;
 }
+.comment-form .comment-field textarea {
+    min-height: 100px;
+    min-width: 50%;
+}
 .comment-field + .comment-field {
     margin-top: 10px;
 }
