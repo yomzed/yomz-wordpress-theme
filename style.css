@@ -216,6 +216,20 @@ footer {
 .comments-list > .comment:first-child article {
     border: 0;
 }
+.comment article header {
+    padding-bottom: 10px;
+}
+.comment article header cite {
+    font-style: normal;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+}
+.comment article header time {
+    font-weight: 400;
+}
+.comment article header time::before {
+    content: '• ';
+}
 
 @media (prefers-color-scheme: dark) {
     body {
