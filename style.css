@@ -210,6 +210,9 @@ footer {
     list-style-type: none;
     padding-left: 0;
 }
+ul.children {
+    list-style-type: none;
+}
 .comment article {
     padding: 20px 0;
     border-top: 1px solid #e5e5e5;
@@ -240,8 +243,9 @@ footer {
     margin-top: 15px;
     display: inline-block;
     text-decoration: none;
-    color:initial;
-    border-bottom: 3px solid greenyellow
+    color:grey;
+    border-bottom: 3px solid greenyellow;
+    font-family: 'Poppins', sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
